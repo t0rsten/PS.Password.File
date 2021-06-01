@@ -9,7 +9,7 @@
 # PS.Password.File
 A Powershell Module to handle passwords.
 
-In order to use passwords in Powershell scripts and not to store them as plain text in the script, it is useful to read in the password as a SecureString and export/import it in an encrypted file. The Windows-internal Data Protection API (DPAPI) is used for this purpose. The disadvantage of this is that the encrypted file can only be decrypted by the same user and the same computer.
+In order to use passwords in Powershell scripts and not to store them as plain text in the script, it is useful to read in the password as a SecureString and export/import in an encrypted file. The Windows-internal [Data Protection API (DPAPI)](https://docs.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection) is used for this purpose. The disadvantage of this is that the encrypted file can only be decrypted by the same user and the same computer.
 
 As an alternative, the password file can be encrypted and decrypted with an AES key. The advantage of this method is that the decryption can be done on any computer and independently of a user. However, a keyfile is absolutely necessary for decryption.
 
